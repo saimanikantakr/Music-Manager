@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Music Playlist Manager</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎵 Music Playlist Manager</h1>
+
+
+
+
+    <div class="form-card">
+
+        <h2>Add Song</h2>
+
+        <form id="songForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Song title"
+                required
+            >
+
+            <input
+                type="text"
+                id="artist"
+                placeholder="Artist"
+                required
+            >
+
+            <button type="submit">
+                🔎 Search & Add
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+
+
+
+    <div class="playlist-card">
+
+        <div class="playlist-header">
+
+            <div>
+
+                <h2>Your Playlist</h2>
+
+                <p id="songCount">
+                    0 songs
+                </p>
+
+            </div>
+
+            <button
+                id="clearPlaylistBtn"
+                type="button">
+
+                🗑️ Clear Playlist
+
+            </button>
+
+        </div>
+
+
+
+
+        <input
+            type="text"
+            id="playlistSearch"
+            class="search-box"
+            placeholder="🔍 Search songs or artists..."
+        >
+
+
+
+
+        <div class="filter-section">
+
+            <input
+                type="text"
+                id="artistFilter"
+                placeholder="Filter by artist"
+            >
+
+            <button
+                id="filterBtn"
+                type="button">
+
+                Filter
+
+            </button>
+
+            <button
+                id="showAllBtn"
+                type="button">
+
+                Show All
+
+            </button>
+
+            <button
+                id="favoritesBtn"
+                type="button">
+
+                ❤️ Favorites
+
+            </button>
+
+            <button
+                id="shuffleBtn"
+                type="button">
+
+                🔀 Shuffle
+
+            </button>
+
+        </div>
+
+
+
+
+        <div class="table-container">
+
+            <table id="songTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Song</th>
+
+                        <th>Artist</th>
+
+                        <th>Duration</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="songList">
+
+                    
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+
+<div id="playerContainer" class="player-container">
+
+    <h3 id="nowPlayingTitle">🎵 Nothing Playing</h3>
+
+
+    <div id="youtubePlayer"></div>
+
+
+    <div class="music-controls">
+
+    <button id="previousBtn" type="button">
+        ⏮ Previous
+    </button>
+
+    <button id="playBtn" type="button">
+        ▶️ Play
+    </button>
+
+    <button id="pauseBtn" type="button">
+        ⏸️ Pause
+    </button>
+
+    <button id="nextBtn" type="button">
+        Next ⏭
+    </button>
+
+    <button id="backBtn" type="button">
+        ⏪ 10s
+    </button>
+
+    <button id="forwardBtn" type="button">
+        10s ⏩
+    </button>
+
+    </div>
+
+    <div class="progress-section">
+
+        <span id="currentTime">0:00</span>
+
+        <input
+            type="range"
+            id="progressBar"
+            min="0"
+            max="100"
+            value="0"
+        >
+
+        <span id="totalTime">0:00</span>
+
+    </div>
+
+    <div class="volume-section">
+
+        <span>🔊</span>
+
+        <input
+            type="range"
+            id="volumeBar"
+            min="0"
+            max="100"
+            value="100"
+        >
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

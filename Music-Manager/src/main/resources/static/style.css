@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+#songForm {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#songForm input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#songForm button {
+    background: #252c61;
+    color: white;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.success {
+    color: #16833b;
+}
+
+.error {
+    color: #d63031;
+}
+
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+#songCount {
+    margin-top: 5px;
+    color: #666;
+}
+
+.clear-btn {
+    background: #d63031;
+    color: white;
+}
+
+.search-box {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.controls input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+#filterBtn {
+    background: #252c61;
+    color: white;
+}
+
+#showAllBtn {
+    background: #555;
+    color: white;
+}
+
+#favoritesBtn {
+    background: #e84393;
+    color: white;
+}
+
+#shuffleBtn {
+    background: #333;
+    color: white;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f5f5f5;
+}
+
+.empty {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+.play-btn {
+    background: #27ae60;
+    color: white;
+    margin-right: 5px;
+}
+
+.favorite-btn {
+    background: #ffe4ec;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.player-container {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+#nowPlayingTitle {
+    text-align: center;
+    margin: 5px 0 20px;
+}
+
+#youtubePlayer {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.music-controls button {
+    background: #252c61;
+    color: white;
+    min-width: 85px;
+}
+
+.music-controls button:hover {
+    opacity: 0.8;
+}
+
+#playBtn,
+#pauseBtn {
+    min-width: 80px;
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+.progress-section span {
+    min-width: 40px;
+    font-size: 13px;
+    color: #555;
+}
+
+#currentTime {
+    text-align: right;
+}
+
+#totalTime {
+    text-align: left;
+}
+
+#progressBar {
+    flex: 1;
+    cursor: pointer;
+}
+
+.volume-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px auto;
+}
+
+#volumeBar {
+    width: 160px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .playlist-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #songForm {
+        flex-direction: column;
+    }
+
+    #songForm input,
+    #songForm button {
+        width: 100%;
+    }
+
+    .music-controls {
+        gap: 6px;
+    }
+
+    .music-controls button {
+        min-width: 75px;
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+    .progress-section {
+        gap: 6px;
+    }
+
+    #volumeBar {
+        width: 120px;
+    }
+}
